@@ -2,7 +2,7 @@ class Dog < Sinatra::Base
 
     attr_accessor :name, :breed, :age
 
-    @@all=[]
+    @@DOGS=[]
 
     def initialize(name, breed, age)
         @name=name
@@ -12,10 +12,10 @@ class Dog < Sinatra::Base
     end
 
     def save
-        @@all<<self
+        @@DOGS<<self
     end
 
     def self.all
-        @@all
+        @@DOGS
     end
 end
